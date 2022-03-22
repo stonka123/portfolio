@@ -17,21 +17,12 @@ body {
 	font-size: 1.6rem;
 	overflow-x: hidden;
 }
-
+// HEADER
 .header {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
-}
-#particles-js {
-	// position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	z-index: 1;
+	overflow-x: hidden;
 }
 
 .box {
@@ -41,13 +32,14 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+	background-color: transparent;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
 	color: $white;
 	font-size: 2rem;
-	z-index: 2;
+
 	&__text {
 		&--color {
 			color: $pink;
@@ -58,7 +50,7 @@ body {
 	}
 	&__button {
 		padding: 1em 1.5em;
-		margin-top: 1em;
+		margin-top: 2em;
 		background-color: transparent;
 		color: $white;
 		border: 2px solid $white;
@@ -66,18 +58,141 @@ body {
 		transition: background-color 0.4s, border 0.4s;
 		&-arrow {
 			margin-left: 1em;
-			transition: transform 0.4s;
+			transition: transform 0.4s, color 0.4s;
 		}
 		&:hover {
 			background-color: $aqua;
 			border: 2px solid $aqua;
 			.box__button-arrow {
 				transform: rotateZ(90deg);
+				color: $pink;
 			}
 		}
 	}
 }
 
+.hamburger {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 100;
+}
+
+.desktop {
+	display: none;
+}
+
+// NAV MOBILE
+
+.mobile {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	transform: translateX(100%);
+	background-color: $sharp-dark;
+	width: 100vw;
+	height: 100vh;
+	transition: transform 0.3s;
+	&__items {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+	}
+	&__item {
+		display: block;
+		position: relative;
+		padding: 1em;
+		margin: 1em;
+		text-decoration: none;
+		color: $white;
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 2px;
+			height: 100%;
+			transform: scaleY(0);
+			transition: transform 0.3s;
+			background-color: $pink;
+			content: '';
+		}
+		&:hover::before {
+			transform: scaleY(1);
+		}
+	}
+	&__show {
+		transform: translateX(0);
+	}
+}
+
 .test {
 	height: 200vh;
+}
+
+// MEDIA
+
+@media (min-width: 576px) {
+	.box__text {
+		font-size: 3rem;
+	}
+	.box__info {
+		font-size: 2.5rem;
+	}
+}
+@media (min-width: 768px) {
+	.box__text {
+		font-size: 4rem;
+	}
+	.box__info {
+		font-size: 3.5rem;
+	}
+}
+@media (min-width: 992px) {
+	.box__text {
+		font-size: 5rem;
+	}
+	.box__info {
+		font-size: 4.5rem;
+	}
+	.hamburger {
+		display: none;
+	}
+	.desktop {
+		display: flex;
+		position: relative;
+
+		&__items {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			width: 100%;
+
+			z-index: 3;
+		}
+		&__item {
+			position: relative;
+			text-decoration: none;
+			color: $white;
+			margin-right: 4em;
+			padding: 1em 1.5em;
+			&::before {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				transform: scaleX(0);
+				transition: transform 0.3s;
+				background-color: $pink;
+				content: '';
+			}
+			&:hover::before {
+				transform: scaleX(1);
+			}
+		}
+	}
 }
