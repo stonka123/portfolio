@@ -24,7 +24,6 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
-
 .box {
   position: absolute;
   display: -webkit-box;
