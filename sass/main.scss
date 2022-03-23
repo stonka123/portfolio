@@ -15,14 +15,20 @@ html {
 body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 1.6rem;
+	color: $dark;
 	overflow-x: hidden;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
 }
 // HEADER
 .header {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 .box {
@@ -48,25 +54,49 @@ body {
 	&__info {
 		margin-top: 1em;
 	}
+	// &__button {
+	// 	padding: 1em 1.5em;
+	// 	margin-top: 2em;
+	// 	background-color: transparent;
+	// 	color: $white;
+	// 	border: 2px solid $white;
+	// 	cursor: pointer;
+	// 	transition: background-color 0.4s, border 0.4s, color 0.4s;
+
+	// 	&:hover {
+	// 		background-color: $aqua;
+	// 		border: 2px solid $aqua;
+	// 		color: $pink;
+	// 		.box__button-arrow {
+	// 			transform: rotateZ(90deg);
+	// 			color: $pink;
+	// 		}
+	// 	}
+	// }
 	&__button {
-		padding: 1em 1.5em;
+		padding: 1em 3em;
 		margin-top: 2em;
-		background-color: transparent;
 		color: $white;
-		border: 2px solid $white;
+		background-color: transparent;
+		position: relative;
+		outline: none;
+		border: none;
 		cursor: pointer;
-		transition: background-color 0.4s, border 0.4s;
-		&-arrow {
-			margin-left: 1em;
-			transition: transform 0.4s, color 0.4s;
+		z-index: -1;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			background: $gradient;
+			z-index: -1;
+			background-size: 300% 100%;
+			transition: all 0.4s;
 		}
-		&:hover {
-			background-color: $aqua;
-			border: 2px solid $aqua;
-			.box__button-arrow {
-				transform: rotateZ(90deg);
-				color: $pink;
-			}
+		&:hover::before {
+			background-position: 100% 0;
 		}
 	}
 }
@@ -81,12 +111,17 @@ body {
 .desktop {
 	display: none;
 }
-
+.hamburger-rainbow,
+.hamburger-rainbow::after,
+.hamburger-rainbow::before {
+	background-color: $aqua;
+}
 // NAV MOBILE
 
 .mobile {
-	position: absolute;
+	position: fixed;
 	top: 0;
+	bottom: 0;
 	left: 0;
 	z-index: 3;
 	transform: translateX(100%);
@@ -128,6 +163,84 @@ body {
 		transform: translateX(0);
 	}
 }
+// SECTION STYLE
+.section-style {
+	display: inline-block;
+	position: relative;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	color: $sharp-dark;
+	text-align: center;
+	margin: 2em auto;
+	transform: translate(-50%, -50%);
+	right: -50%;
+	letter-spacing: 1px;
+
+	&::before {
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: -0.2em auto;
+		height: 2px;
+		width: 75%;
+		background: $gradient;
+	}
+}
+
+// ABOUTME
+
+.section-aboutme {
+	background-color: $dark-white;
+}
+.aboutme__text {
+	text-align: center;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+.stack {
+	margin: 1em auto;
+	padding: 1em;
+	&__text {
+		color: $dark;
+		text-align: center;
+		margin: 1em 0;
+		font-size: 2rem;
+	}
+	&__box {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+}
+.card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 35%;
+	max-width: 250px;
+	margin: 1em 0;
+
+	padding: 1em;
+	// cursor: pointer;
+
+	&__icon {
+		background: $gradient;
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		filter: brightness(0.8);
+		font-size: 100px;
+	}
+	&__name {
+		margin-top: 1em;
+		font-weight: bold;
+	}
+}
 
 .test {
 	height: 200vh;
@@ -141,6 +254,15 @@ body {
 	.box__info {
 		font-size: 2.5rem;
 	}
+	.box__button {
+		font-size: 2rem;
+	}
+	.section-style {
+		font-size: 3rem;
+	}
+	.stack__text {
+		font-size: 2.5rem;
+	}
 }
 @media (min-width: 768px) {
 	.box__text {
@@ -149,6 +271,15 @@ body {
 	.box__info {
 		font-size: 3.5rem;
 	}
+	.box__button {
+		font-size: 2.5rem;
+	}
+	.section-style {
+		font-size: 4rem;
+	}
+	.stack__text {
+		font-size: 3rem;
+	}
 }
 @media (min-width: 992px) {
 	.box__text {
@@ -156,6 +287,9 @@ body {
 	}
 	.box__info {
 		font-size: 4.5rem;
+	}
+	.box__button {
+		font-size: 3rem;
 	}
 	.hamburger {
 		display: none;
@@ -193,5 +327,11 @@ body {
 				transform: scaleX(1);
 			}
 		}
+	}
+	.section-style {
+		font-size: 5rem;
+	}
+	.stack__text {
+		font-size: 3.5rem;
 	}
 }
