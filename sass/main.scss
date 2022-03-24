@@ -54,32 +54,12 @@ body {
 	&__info {
 		margin-top: 1em;
 	}
-	// &__button {
-	// 	padding: 1em 1.5em;
-	// 	margin-top: 2em;
-	// 	background-color: transparent;
-	// 	color: $white;
-	// 	border: 2px solid $white;
-	// 	cursor: pointer;
-	// 	transition: background-color 0.4s, border 0.4s, color 0.4s;
-
-	// 	&:hover {
-	// 		background-color: $aqua;
-	// 		border: 2px solid $aqua;
-	// 		color: $pink;
-	// 		.box__button-arrow {
-	// 			transform: rotateZ(90deg);
-	// 			color: $pink;
-	// 		}
-	// 	}
-	// }
 	&__button {
 		padding: 1em 3em;
 		margin-top: 2em;
 		color: $white;
 		background-color: transparent;
 		position: relative;
-		outline: none;
 		border: none;
 		cursor: pointer;
 		z-index: -1;
@@ -93,7 +73,7 @@ body {
 			background: $gradient;
 			z-index: -1;
 			background-size: 300% 100%;
-			transition: all 0.4s;
+			transition: all 0.5s;
 		}
 		&:hover::before {
 			background-position: 100% 0;
@@ -194,11 +174,26 @@ body {
 .section-aboutme {
 	background-color: $dark-white;
 }
-.aboutme__text {
-	text-align: center;
-	margin: 0 auto;
-	padding: 0 1em;
+.aboutmebox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100vw;
+
+	&__img {
+		width: 50%;
+		max-width: 400px;
+		border: 2px solid;
+		border-image: linear-gradient(90deg, rgba(207, 28, 102, 1) 35%, rgba(4, 194, 201, 1) 100%) 1;
+	}
+	&__text {
+		text-align: center;
+		margin: 1em auto;
+		padding: 0 1em;
+	}
 }
+
 .stack {
 	margin: 1em auto;
 	padding: 1em;
@@ -241,9 +236,46 @@ body {
 		font-weight: bold;
 	}
 }
+.works {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+}
+.workscard {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid black;
+	margin: 0 1em;
+	cursor: pointer;
+	&__img {
+		width: 100%;
+		max-width: 400px;
+	}
+	&__text {
+		position: absolute;
+		transform: translateX(-200%);
+	}
+	&:hover &__text {
+		transform: translateX(0);
+	}
+}
 
 .test {
 	height: 200vh;
+}
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $dark;
+	width: 100vw;
+	height: 10vh;
+	&-text {
+		color: $white;
+	}
 }
 // MEDIA
 

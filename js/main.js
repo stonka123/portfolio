@@ -3,6 +3,7 @@ const nav = document.querySelector('.mobile')
 const navItems = document.querySelectorAll('.mobile__item')
 const main = document.querySelector('.main')
 const burgerBars = document.querySelector('.hamburger-inner')
+const footerYear = document.querySelector('.footer--year')
 
 const showMenu = () => {
 	burgerBtn.classList.toggle('is-active')
@@ -17,6 +18,12 @@ const showMenu = () => {
 	})
 }
 
+const observeYear = () => {
+	const year = new Date().getFullYear()
+	console.log(year)
+	footerYear.textContent = year
+}
+
 const handleObserve = () => {
 	const currentY = window.scrollY
 	if (main.classList.contains('main') && main.offsetTop <= currentY + 30) {
@@ -25,6 +32,6 @@ const handleObserve = () => {
 		burgerBars.classList.remove('hamburger-rainbow')
 	}
 }
-
+observeYear()
 burgerBtn.addEventListener('click', showMenu)
 window.addEventListener('scroll', handleObserve)
