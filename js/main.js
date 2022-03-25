@@ -20,7 +20,6 @@ const showMenu = () => {
 
 const observeYear = () => {
 	const year = new Date().getFullYear()
-	console.log(year)
 	footerYear.textContent = year
 }
 
