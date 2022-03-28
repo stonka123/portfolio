@@ -59,6 +59,12 @@
         <section class="section-style" id="aboutme">O mnie</section>
         <div class="aboutmebox">
             <img src="./img/aboutme-me.jpg" class="aboutmebox__img" alt="Osoba na zdjęciu przedstawia moją osobę">
+            <div class="socials">
+                <a href="http://www.github.com" target="_blank" class="socials-link"><i
+                        class="fa-brands fa-github socials-icon"></i></a>
+                <a href="https://www.linkedin.com" class="socials-link"><i
+                        class="fa-brands fa-linkedin socials-icon"></i></a>
+            </div>
             <p class="aboutmebox__text wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
                 maiores
                 quam
@@ -185,19 +191,22 @@
         <div class="formbox-container">
             <p class="container-text">Chcesz się ze mna skontaktować? Chcesz nawiązać współpracę? Napisz!
             </p>
-            <form action="" class="form">
+            <p class="send-msg">Wiadomośc została wysłana!</p>
 
-                <div class="form-box form-box--error">
-                    <input id="name" type="text" placeholder="Imię i nazwisko">
-                    <p class="error error-show">Wpisz imię i nazwisko</p>
+
+
+            <form action="" class="form">
+                <div class="form-box ">
+                    <input id="username" type="text" placeholder="Imię i nazwisko">
+                    <p class="error">Podaj imię i nazwisko</p>
                 </div>
                 <div class="form-box">
                     <input id="email" type="email" placeholder="E-mail">
-                    <p class="error">Wpisz email</p>
+                    <p class="error">Podaj email</p>
                 </div>
                 <div class="form-box">
                     <input id="subject" type="text" placeholder="Temat">
-                    <p class="error">Wpisz temat</p>
+                    <p class="error">Podaj temat</p>
                 </div>
                 <div class="form-box">
                     <textarea name="msg" id="msg" placeholder="Wiadomość"></textarea>

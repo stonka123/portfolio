@@ -251,6 +251,29 @@ body {
   padding: 0 1em;
 }
 
+.socials {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.socials-icon {
+  margin: 0.5em 1em;
+  color: #04c2c9;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.socials-icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.fa-github {
+  color: #cf1c66;
+}
+
 .stack {
   margin: 1em auto;
   padding: 1em;
@@ -460,6 +483,14 @@ body {
   color: #ffffff;
 }
 
+.send-msg {
+  text-align: center;
+  color: #cf1c66;
+  font-size: 2rem;
+  margin: 0.5em 1em;
+  visibility: hidden;
+}
+
 .formbox-container {
   width: 100vw;
   background-color: #252934;
@@ -555,8 +586,13 @@ body {
   visibility: hidden;
 }
 
-.error-show {
+.form-box.error-show .error {
   visibility: visible;
+}
+
+.error-border input,
+.error-border #msg {
+  border-bottom: 1px solid #cf1c66;
 }
 
 .test {

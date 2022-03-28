@@ -199,6 +199,22 @@ body {
 	}
 }
 
+.socials {
+	font-size: 3rem;
+	cursor: pointer;
+	&-icon {
+		margin: 0.5em 1em;
+		color: $aqua;
+		transition: transform 0.3s;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+.fa-github {
+	color: $pink;
+}
+
 .stack {
 	margin: 1em auto;
 	padding: 1em;
@@ -331,6 +347,14 @@ body {
 		color: $white;
 	}
 }
+.send-msg {
+	text-align: center;
+	color: $pink;
+	font-size: 2rem;
+	margin: 0.5em 1em;
+	visibility: hidden;
+}
+
 .formbox-container {
 	width: 100vw;
 	background-color: $dark;
@@ -396,8 +420,12 @@ body {
 	visibility: hidden;
 }
 
-.error-show {
+.form-box.error-show .error {
 	visibility: visible;
+}
+.error-border input,
+.error-border #msg {
+	border-bottom: 1px solid $pink;
 }
 .test {
 	height: 200vh;
