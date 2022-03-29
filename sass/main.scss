@@ -252,6 +252,9 @@ body {
 		filter: brightness(0.8);
 		font-size: 100px;
 	}
+	&__svg {
+		background-color: red;
+	}
 	&__name {
 		margin-top: 1em;
 		font-weight: bold;

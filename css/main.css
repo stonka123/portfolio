@@ -331,6 +331,10 @@ body {
   font-size: 100px;
 }
 
+.card__svg {
+  background-color: red;
+}
+
 .card__name {
   margin-top: 1em;
   font-weight: bold;
