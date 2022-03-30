@@ -18,6 +18,7 @@ body {
 	color: $dark;
 	overflow-x: hidden;
 }
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
@@ -216,7 +217,7 @@ body {
 }
 
 .stack {
-	margin: 1em auto;
+	margin: 0 auto;
 	padding: 1em;
 	&__text {
 		color: $dark;
@@ -253,7 +254,11 @@ body {
 		font-size: 100px;
 	}
 	&__svg {
-		background-color: red;
+		background: $gradient;
+		width: 87.5px;
+		height: 100px;
+		color: white;
+		background-color: transparent;
 	}
 	&__name {
 		margin-top: 1em;
@@ -294,25 +299,25 @@ body {
 	align-items: center;
 	justify-content: space-around;
 	flex-direction: column;
-	color: $white;
+	color: $dark-white;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	transition: 0.3s;
 	background-color: rgba($dark, 0.8);
-	transform: translate(100%);
+	// transform: translate(100%);
 	&__top {
-		height: 50%;
+		height: 70%;
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
 		flex-direction: column;
-		font-size: 2rem;
-		&-icons {
-			&-icon {
-				margin-left: 1em;
-			}
+		font-size: 1.7rem;
+		&-info {
+			text-align: center;
+			margin: 0 1em;
+			font-size: 1.5rem;
 		}
 	}
 	&__bottom {
@@ -323,18 +328,30 @@ body {
 
 		&-info {
 			text-decoration: none;
-			color: $aqua;
+			color: $pink;
 			padding: 1em;
 			transition: color 0.3s;
 			&:hover {
-				color: $pink;
+				color: $aqua;
 			}
-			&--live {
-				color: $pink;
-				&:hover {
-					color: $aqua;
-				}
-			}
+		}
+	}
+}
+.boxes {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	&__stack {
+		display: flex;
+		align-items: center;
+		align-items: center;
+		font-size: 2rem;
+		color: $aqua;
+		margin-top: 0.5em;
+		&-icon {
+			margin: 0 1em;
 		}
 	}
 }
@@ -343,7 +360,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: $dark;
+	background-color: $sharp-dark;
 	width: 100vw;
 	height: 10vh;
 	&-text {
@@ -359,6 +376,7 @@ body {
 }
 
 .formbox-container {
+	position: relative;
 	width: 100vw;
 	background-color: $dark;
 	color: $white;
@@ -430,8 +448,58 @@ body {
 .error-border #msg {
 	border-bottom: 1px solid $pink;
 }
-.test {
-	height: 200vh;
+// WAVE - dark
+.wave-dark {
+	position: relative;
+	width: 100%;
+	height: 10vh;
+}
+.custom-shape-divider-bottom-1648654971 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1648654971 svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 64px;
+	transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1648654971 .shape-fill {
+	fill: $dark;
+}
+//WAVE - light
+.wave-light {
+	position: relative;
+	width: 100%;
+	height: 10vh;
+}
+.custom-shape-divider-bottom-1648655404 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1648655404 svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 64px;
+}
+
+.custom-shape-divider-bottom-1648655404 .shape-fill {
+	fill: $dark-white;
 }
 // MEDIA
 
