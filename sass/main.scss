@@ -241,7 +241,6 @@ body {
 	width: 35%;
 	max-width: 250px;
 	margin: 1em 0;
-
 	padding: 1em;
 	// cursor: pointer;
 
@@ -302,22 +301,25 @@ body {
 	color: $dark-white;
 	bottom: 0;
 	left: 0;
+	top: 0;
+	right: 0;
 	width: 100%;
 	height: 100%;
 	transition: 0.3s;
-	background-color: rgba($dark, 0.8);
+	background-color: rgba($dark, 0.9);
 	// transform: translate(100%);
 	&__top {
-		height: 70%;
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
 		flex-direction: column;
-		font-size: 1.7rem;
+		font-size: 1.5rem;
+		&-text {
+			text-align: center;
+		}
 		&-info {
 			text-align: center;
-			margin: 0 1em;
-			font-size: 1.5rem;
+			\margin-top: 1em;
 		}
 	}
 	&__bottom {
@@ -329,7 +331,7 @@ body {
 		&-info {
 			text-decoration: none;
 			color: $pink;
-			padding: 1em;
+			padding: 0.3em 0.7em;
 			transition: color 0.3s;
 			&:hover {
 				color: $aqua;
@@ -342,31 +344,23 @@ body {
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
+	margin-top: 0.5em;
 	width: 100%;
 	&__stack {
 		display: flex;
 		align-items: center;
 		align-items: center;
-		font-size: 2rem;
+		font-size: 1.6rem;
 		color: $aqua;
 		margin-top: 0.5em;
+		margin-left: 0.5em;
 		&-icon {
-			margin: 0 1em;
+			margin: 0 0.5em;
+			color: white;
 		}
 	}
 }
 
-.footer {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: $sharp-dark;
-	width: 100vw;
-	height: 10vh;
-	&-text {
-		color: $white;
-	}
-}
 .send-msg {
 	text-align: center;
 	color: $pink;
@@ -447,6 +441,57 @@ body {
 .error-border input,
 .error-border #msg {
 	border-bottom: 1px solid $pink;
+}
+
+// FOOTER
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: $sharp-dark;
+	width: 100vw;
+	// height: 10vh;
+	&-text {
+		color: $white;
+		margin: 1em;
+		span {
+			color: $pink;
+		}
+	}
+}
+
+.square {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	&-social {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		text-align: center;
+		font-size: 2.3rem;
+		background-color: $dark;
+		border: 1px solid rgba($pink, 0.2);
+		width: 60px;
+		height: 60px;
+		text-align: center;
+		margin: 1em;
+		text-decoration: none;
+		transition: transform 0.4s, background-color 0.4s;
+		i {
+			font-size: 2.4rem;
+			color: $aqua;
+			filter: brightness(0.7);
+		}
+		&:hover {
+			background-color: $pink;
+			transform: scale(0.9);
+		}
+	}
 }
 // WAVE - dark
 .wave-dark {

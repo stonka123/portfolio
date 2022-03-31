@@ -64,7 +64,7 @@ const showMenu = () => {
 // FOOTER
 const observeYear = () => {
 	const year = new Date().getFullYear()
-	footerYear.textContent = year
+	footerYear.textContent = `© ${year}`
 }
 // OBSERVE HAMBTN COLOR SECTION
 const handleObserve = () => {
