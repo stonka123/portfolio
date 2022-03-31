@@ -299,7 +299,7 @@ body {
 	height: 100%;
 	transition: 0.3s;
 	background-color: rgba($dark, 0.9);
-	// transform: translate(100%);
+	transform: translate(100%);
 	&__top {
 		display: flex;
 		align-items: center;
@@ -311,7 +311,7 @@ body {
 		}
 		&-info {
 			text-align: center;
-			\margin-top: 1em;
+			margin-top: 1em;
 		}
 	}
 	&__bottom {

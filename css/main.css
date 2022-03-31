@@ -408,6 +408,8 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: rgba(37, 41, 52, 0.9);
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
 }
 
 .boxcard__top {
@@ -432,7 +434,7 @@ body {
 
 .boxcard__top-info {
   text-align: center;
-  \margin-top: 1em;
+  margin-top: 1em;
 }
 
 .boxcard__bottom {
