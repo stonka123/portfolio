@@ -314,10 +314,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 35%;
-  max-width: 250px;
-  margin: 1em 0;
-  padding: 1em;
+  width: 30%;
+  max-width: 150px;
+  margin: 1em;
 }
 
 .card__icon {
@@ -328,16 +327,7 @@ body {
   color: transparent;
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
-  font-size: 100px;
-}
-
-.card__svg {
-  background: #cf1c66 -webkit-gradient(linear, left top, right top, color-stop(35%, #cf1c66), to(#04c2c9));
-  background: #cf1c66 linear-gradient(90deg, #cf1c66 35%, #04c2c9 100%);
-  width: 87.5px;
-  height: 100px;
-  color: white;
-  background-color: transparent;
+  font-size: 50px;
 }
 
 .card__name {
@@ -640,6 +630,7 @@ body {
 .footer-text {
   color: #ffffff;
   margin: 1em;
+  opacity: 0.5;
 }
 
 .footer-text span {
