@@ -9,19 +9,28 @@ const username = document.querySelector('#username')
 const email = document.querySelector('#email')
 const subject = document.querySelector('#subject')
 const msg = document.querySelector('#msg')
+const sendMsg = document.querySelector('.send-msg')
 const sendBtn = document.querySelector('.form-button')
 
 // FORM VALIDATION
 const formInputs = [username, email, subject, msg]
 
-const showError = (input, errorView) => {
+// test
+const showError = input => {
 	const formBox = input.parentElement
-	const errorMsg = formBox.querySelector('.error')
+	const errorDisplay = document.querySelector('.error')
 	formBox.classList.add('error-show')
 	formBox.classList.add('error-border')
-
-	errorMsg.textContent = errorView
 }
+// const showError = (input, errorView) => {
+// 	const formBox = input.parentElement
+// 	const errorMsg = formBox.querySelector('.error')
+// 	formBox.classList.add('error-show')
+// 	formBox.classList.add('error-border')
+
+// 	errorMsg.textContent = errorView
+
+// }
 const clearError = input => {
 	const formBox = input.parentElement
 	formBox.classList.remove('error-show')

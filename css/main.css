@@ -534,6 +534,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 1em;
+  margin: 0 auto;
 }
 
 .form-box {
@@ -573,7 +574,7 @@ body {
 .form-button {
   padding: 0.7em 2em;
   font-size: 1.5rem;
-  margin: 1em;
+  margin: 1em 2em;
   color: #f5f5f5;
   background: #cf1c66;
   border: none;

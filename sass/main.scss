@@ -364,6 +364,7 @@ body {
 .formbox-container {
 	position: relative;
 	width: 100vw;
+
 	background-color: $dark;
 	color: $white;
 }
@@ -378,6 +379,8 @@ body {
 	justify-content: center;
 	flex-direction: column;
 	margin: 0 1em;
+	margin: 0 auto;
+
 	&-box {
 		display: flex;
 		align-items: center;
@@ -403,7 +406,7 @@ body {
 	&-button {
 		padding: 0.7em 2em;
 		font-size: 1.5rem;
-		margin: 1em;
+		margin: 1em 2em;
 		color: $dark-white;
 		background: $pink;
 		border: none;
