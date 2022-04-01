@@ -180,13 +180,14 @@ body {
 .section-aboutme {
 	background-color: $dark-white;
 }
+.aboutme-container {
+	margin: 0 1em;
+}
 .aboutmebox {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
 	width: 100vw;
-
 	&__img {
 		width: 50%;
 		max-width: 400px;
@@ -199,22 +200,56 @@ body {
 		padding: 0 1em;
 	}
 }
-
 .socials {
-	font-size: 3rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	margin: 1em;
 	cursor: pointer;
-	&-icon {
-		margin: 0.5em 1em;
-		color: $aqua;
-		transition: transform 0.3s;
+	width: 50%;
+	&-square {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		text-align: center;
+		font-size: 2.3rem;
+		background-color: $dark;
+		border: 1px solid $pink;
+		width: 40px;
+		margin: 0.5em;
+		height: 40px;
+		text-align: center;
+		text-decoration: none;
+		transition: transform 0.3s, background-color 0.3s;
+		i {
+			font-size: 2.4rem;
+			color: $aqua;
+			filter: brightness(0.7);
+		}
 		&:hover {
-			transform: scale(1.1);
+			background-color: $pink;
+			transform: scale(0.9);
 		}
 	}
 }
-.fa-github {
-	color: $pink;
-}
+
+// .socials {
+// 	font-size: 3rem;
+// 	cursor: pointer;
+// 	&-icon {
+// 		margin: 0.5em 1em;
+// 		color: $aqua;
+// 		transition: transform 0.3s;
+// 		&:hover {
+// 			transform: scale(1.1);
+// 		}
+// 	}
+// }
+// .fa-github {
+// 	color: $pink;
+// }
 
 .stack {
 	margin: 0 auto;
