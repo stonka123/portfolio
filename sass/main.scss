@@ -542,6 +542,19 @@ body {
 .custom-shape-divider-bottom-1648655404 .shape-fill {
 	fill: $dark-white;
 }
+
+.pojemnik {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.test {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
 // MEDIA
 
 @media (min-width: 576px) {
