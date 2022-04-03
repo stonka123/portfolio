@@ -202,7 +202,7 @@ body {
 }
 .socials {
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	margin: 1em;
@@ -226,7 +226,6 @@ body {
 		i {
 			font-size: 2.4rem;
 			color: $aqua;
-			filter: brightness(0.7);
 		}
 		&:hover {
 			background-color: $pink;
@@ -234,22 +233,6 @@ body {
 		}
 	}
 }
-
-// .socials {
-// 	font-size: 3rem;
-// 	cursor: pointer;
-// 	&-icon {
-// 		margin: 0.5em 1em;
-// 		color: $aqua;
-// 		transition: transform 0.3s;
-// 		&:hover {
-// 			transform: scale(1.1);
-// 		}
-// 	}
-// }
-// .fa-github {
-// 	color: $pink;
-// }
 
 .stack {
 	margin: 0 auto;
@@ -284,6 +267,10 @@ body {
 		color: transparent;
 		filter: brightness(0.8);
 		font-size: 50px;
+		transition: transform 0.3s;
+		&:hover {
+			transform: scale(1.1);
+		}
 	}
 
 	&__name {

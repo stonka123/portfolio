@@ -255,9 +255,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -299,8 +299,6 @@ body {
 .socials-square i {
   font-size: 2.4rem;
   color: #04c2c9;
-  -webkit-filter: brightness(0.7);
-          filter: brightness(0.7);
 }
 
 .socials-square:hover {
@@ -363,6 +361,15 @@ body {
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
   font-size: 50px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.card__icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .card__name {

@@ -12,6 +12,7 @@
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
     <script src="https://kit.fontawesome.com/2c8b96ae6c.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="./css/hamburger.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/animationbgc.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -60,9 +61,10 @@
         <section class="section-style" id="aboutme">O mnie</section>
         <div class="aboutme-container">
             <div class="aboutmebox">
-                <img src="./img/aboutme-me.jpg" class="aboutmebox__img" alt="Osoba na zdjęciu przedstawia moją osobę">
-                <div class="socials">
-                    <a class="socials-square" href="http://www.github.com" target="_blank">
+                <img src="./img/aboutme-me.jpg" data-aos="fade-right" class="aboutmebox__img"
+                    alt="Osoba na zdjęciu przedstawia moją osobę">
+                <div class="socials" data-aos="fade-left">
+                    <a class="socials-square" href="http://www.facebook.com" target="_blank">
                         <i class="fa-brands fa-facebook-f socials-square-link"></i>
                     </a>
                     <a class="socials-square" href="http://www.github.com" target="_blank">
@@ -83,23 +85,6 @@
             eius enim dolor rem autem sit veniam quo quis libero nostrum sapiente, sint odio excepturi, animi
             deleniti laboriosam dolores ullam. Vitae excepturi corrupti magni similique esse.</p>
 
-
-
-        <!-- <div class="aboutmebox">
-            <img src="./img/aboutme-me.jpg" class="aboutmebox__img" alt="Osoba na zdjęciu przedstawia moją osobę">
-            <div class="socials">
-                <a href="http://www.github.com" target="_blank" class="socials-link"><i
-                        class="fa-brands fa-github socials-icon"></i></a>
-                <a href="https://www.linkedin.com" class="socials-link"><i
-                        class="fa-brands fa-linkedin socials-icon"></i></a>
-            </div>
-            <p class="aboutmebox__text wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-                maiores
-                quam
-                ratione quis perspiciatis nesciunt molestiae ea qui? Unde obcaecati architecto deserunt repellendus quod
-                eius enim dolor rem autem sit veniam quo quis libero nostrum sapiente, sint odio excepturi, animi
-                deleniti laboriosam dolores ullam. Vitae excepturi corrupti magni similique esse.</p>
-        </div> -->
         <div class="wave-light">
             <div class="custom-shape-divider-bottom-1648655404">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
@@ -113,7 +98,7 @@
             <div class="stack wrapper">
                 <p class="stack__text">Umiejętności i technologie, które używam:</p>
 
-                <div class="stack__box">
+                <div class="stack__box" data-aos="fade-right">
                     <div class="card">
                         <i class="fa-brands fa-html5 card__icon"></i>
                         <p class="card__name">HTML5</p>
@@ -143,7 +128,7 @@
                     </div>
                 </div>
                 <p class="stack__text wrapper">Technologie, w których chcę się rozwijać:</p>
-                <div class="stack__box">
+                <div class="stack__box" data-aos="fade-right">
                     <div class="card">
                         <i class="fa-brands fa-react card__icon"></i>
                         <p class="card__name">React</p>
@@ -168,7 +153,7 @@
         </div>
         <section class="section-style" id="works">Prace</section>
         <div class="works">
-            <div class="workscard">
+            <div class="workscard" data-aos="flip-left">
                 <img src="./img/project2.jpg" class="workscard__img" alt="projekt 1">
                 <div class="boxcard">
                     <div class="boxcard__top">
@@ -216,7 +201,7 @@
             </p>
             <p class="send-msg">Wiadomośc została wysłana!</p>
 
-            <form action="" class="form">
+            <form action="" class="form" data-aos="zoom-in">
                 <div class="form-box">
                     <input id="username" type="text" placeholder="Imię i nazwisko">
                     <p class="error">Podaj imię i nazwisko</p>
@@ -240,10 +225,13 @@
         <footer class="footer">
 
             <div class="square">
-                <a class="square-social" href="http://www.github.com" target="_blank">
+                <a class="square-social" href="http://www.facebook.com" data-aos="flip-up" target="_blank">
+                    <i class="fa-brands fa-facebook-f square-social-link"></i>
+                </a>
+                <a class="square-social" href="http://www.github.com" data-aos="flip-up" target="_blank">
                     <i class="fa-brands fa-github square-social-link"></i>
                 </a>
-                <a class="square-social" href="https://www.linkedin.com" target="_blank">
+                <a class="square-social" href="https://www.linkedin.com" data-aos="flip-up" target="_blank">
                     <i class="fa-brands fa-linkedin square-social-link"></i>
                 </a>
 
@@ -251,7 +239,15 @@
             <p class="footer-text">Tomasz Twarowski <span class="footer--year"></span></>
         </footer>
     </main>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        AOS.init({
+            startEvent: 'DOMContentLoaded',
+            once: true,
+            delay: 200
+        })
+    </script>
     <script src="./assets/particles.min.js"></script>
     <script src="app.js"></script>
     <script src="./js/main.js"></script>
