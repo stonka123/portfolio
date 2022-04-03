@@ -30,10 +30,10 @@
         <!-- CANVAS BGC -->
         <div id="particles-js">
             <div class="box">
-                <p class="box__text">Cześć! Jestem
+                <p class="box__text text-focus-in">Cześć! Jestem
                     <span class="box__text--color">Tomasz Twarowski</span>.</>
-                <p class="box__info">Jestem frontend developerem.</p>
-                <a href="#works" class="box__button">Zobacz moje projekty
+                <p class="box__info text-focus-in">Jestem frontend developerem.</p>
+                <a href="#works" class="box__button slide-in-bottom">Zobacz moje projekty
                 </a>
             </div>
         </div>
@@ -64,9 +64,7 @@
                 <img src="./img/aboutme-me.jpg" data-aos="fade-right" class="aboutmebox__img"
                     alt="Osoba na zdjęciu przedstawia moją osobę">
                 <div class="socials" data-aos="fade-left">
-                    <a class="socials-square" href="http://www.facebook.com" target="_blank">
-                        <i class="fa-brands fa-facebook-f socials-square-link"></i>
-                    </a>
+
                     <a class="socials-square" href="http://www.github.com" target="_blank">
                         <i class="fa-brands fa-github socials-square-link"></i>
                     </a>
@@ -98,51 +96,51 @@
             <div class="stack wrapper">
                 <p class="stack__text">Umiejętności i technologie, które używam:</p>
 
-                <div class="stack__box" data-aos="fade-right">
-                    <div class="card">
+                <div class="stack__box">
+                    <div class="card" data-aos="fade-right" data-aos-delay="100">
                         <i class="fa-brands fa-html5 card__icon"></i>
                         <p class="card__name">HTML5</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-left" data-aos-delay="200">
                         <i class="fa-brands fa-css3 card__icon"></i>
                         <p class="card__name">CSS3</p>
                     </div>
 
-                    <div class="card">
+                    <div class="card" data-aos="fade-right" data-aos-delay="300">
                         <i class="fa-brands fa-sass card__icon"></i>
                         <p class="card__name">Sass</p>
                     </div>
 
-                    <div class="card">
+                    <div class="card" data-aos="fade-left" data-aos-delay="400">
                         <i class="fa-brands fa-js card__icon"></i>
                         <p class="card__name">JavaScript</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-right" data-aos-delay="500">
                         <i class="fa-brands fa-bootstrap card__icon"></i>
                         <p class="card__name">Bootstrap</p>
                     </div>
 
-                    <div class="card">
+                    <div class="card" data-aos="fade-left" data-aos-delay="600">
                         <i class="fa-brands fa-github card__icon"></i>
                         <p class="card__name">GitHub</p>
                     </div>
                 </div>
                 <p class="stack__text wrapper">Technologie, w których chcę się rozwijać:</p>
                 <div class="stack__box" data-aos="fade-right">
-                    <div class="card">
+                    <div class="card" data-aos="fade-right" data-aos-delay="700">
                         <i class="fa-brands fa-react card__icon"></i>
                         <p class="card__name">React</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-left" data-aos-delay="800">
                         <i class="fa-brands fa-angular card__icon"></i>
                         <p class="card__name">Angular</p>
                     </div>
 
-                    <div class="card">
+                    <div class="card" data-aos="fade-right" data-aos-delay="900">
                         <i class="fa-brands fa-vuejs card__icon"></i>
                         <p class="card__name">Vue</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-left" data-aos-delay="1000">
                         <i class="fa-brands fa-node card__icon"></i>
                         <p class="card__name">Node.js</p>
                     </div>
@@ -225,9 +223,7 @@
         <footer class="footer">
 
             <div class="square">
-                <a class="square-social" href="http://www.facebook.com" data-aos="flip-up" target="_blank">
-                    <i class="fa-brands fa-facebook-f square-social-link"></i>
-                </a>
+
                 <a class="square-social" href="http://www.github.com" data-aos="flip-up" target="_blank">
                     <i class="fa-brands fa-github square-social-link"></i>
                 </a>
@@ -241,12 +237,13 @@
     </main>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
         AOS.init({
             startEvent: 'DOMContentLoaded',
+            offset: 200,
             once: true,
             delay: 200
-        })
+        });
+
     </script>
     <script src="./assets/particles.min.js"></script>
     <script src="app.js"></script>
